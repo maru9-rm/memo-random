@@ -1,0 +1,15 @@
+@import 'reset';
+@import 'home';
+@import 'header';
+@import 'footer';
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}

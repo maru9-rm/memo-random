@@ -1,0 +1,28 @@
+.header {
+    background-color: black;
+
+
+
+    &-title {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        line-height: 42px;
+        padding-top: 5px;
+
+    }
+    
+    &-title span {
+        color: yellow;
+    }
+    
+    &-description {
+        font-size:1em ;
+        color: white;
+        text-align: center;
+        padding-bottom: 3px;
+    }
+
+
+}
+
