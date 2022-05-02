@@ -2,10 +2,16 @@
 @import 'home';
 @import 'header';
 @import 'footer';
+@import 'login';
+@import 'flash';
 
 .container {
     width: 80%;
     margin: 0 auto;
+}
+
+.align-center {
+    text-align: center;
 }
 
 .flex-wrapper {

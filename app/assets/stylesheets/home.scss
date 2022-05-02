@@ -3,26 +3,16 @@
 }
 
 .phrase-show {
+    margin: 0 auto;
     text-align: center;
     width: 80%;
     font-size: 4em;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-
+    margin-top: 30px;
+    min-height: 600px;
 
 }
 
 .home-buttons {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     width: 100%;
 
     &-item {
