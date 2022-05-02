@@ -8,6 +8,15 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    .header
+      .container
+        .header-title
+          MEMORAND
+          %span<>
+            O
+          M
+        .header-description 登録したメモをランダムに表示します！
+      
     - if flash[:notice]
       .alert.alert-info
         = flash[:notice]
@@ -15,3 +24,6 @@
       .alert.alert-danger
         = flash[:alert]
     = yield
+
+    .footer
+      (c)funAholi9
