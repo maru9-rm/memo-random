@@ -4,9 +4,15 @@
 
     .phrase-show
         ここにメモを表示する。テストテストテストテストテストテストテストテストテストテストテストテスト
-
+        -#if文でまだmemorandumが一つも作成されてない場合は「まだメモされていることはありません」みたいなテキストを表示したい
     .home-buttons
         %button.home-buttons-item 次のメモを見る
-        %button.home-buttons-item 新しいメモを登録する
-        %button.home-buttons-item メモ一覧を見る
+        
+        
+        %button.home-buttons-item
+            =link_to '新しいメモを登録する' ,new_memorandum_path
+        
+        
+        %button.home-buttons-item
+            =link_to 'メモ一覧を見る' ,memorandums_path
 
