@@ -1,0 +1,24 @@
+=render 'commons/header'
+
+.container
+    %h1.page-title
+        Create New Memorandum
+
+    = form_with(model: @memorandum, local: true) do |f|
+        .form-label
+            = f.label :content, 'Memorandum'
+        .form-area
+            = f.text_area :content, class:""
+        .flex-wrapper
+            .tag-wrapper.flex-wrapper
+                .form-label
+                    = f.label :tag, 'Tag'
+                .form-field
+                    = f.text_field :tag
+            .source-wrapper.flex-wrapper
+                .form-label
+                    = f.label :source, 'Source'
+                .form-field
+                    = f.text_field :source
+        .actions
+            = f.submit "CREATE", class: "button"

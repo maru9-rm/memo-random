@@ -4,6 +4,7 @@
 @import 'footer';
 @import 'login';
 @import 'flash';
+@import 'memorandum';
 
 .container {
     width: 80%;
@@ -18,4 +19,19 @@
     display: flex;
     justify-content:space-between;
     flex-wrap: wrap;
+}
+
+
+.page-title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.button {
+    font-weight: bold;
+    height: 60px;
+    border: none;
+    padding: 0 20px;
 }

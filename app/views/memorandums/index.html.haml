@@ -1,0 +1,21 @@
+=render 'commons/header'
+
+.container
+    %h1.page-title Index
+    %table.table
+        %tr
+            %th Time
+            %th Content
+            %th Tag
+            %th Source
+            %th Edit
+        -@memorandums.each do |memorandum|
+            %tr
+                %td=memorandum.created_at.strftime('%Y/%m/%d')
+                %td=memorandum.content
+                %td=memorandum.tag
+                %td=memorandum.source
+                %td
+                    edit
+                    %br
+                    delete
