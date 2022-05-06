@@ -1,5 +1,9 @@
 =render 'commons/header'
 
+%ul
+    - @memorandum.errors.full_messages.each do |message|
+        %li= message
+
 .container
     %h1.page-title
         Create New Memorandum

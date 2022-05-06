@@ -15,5 +15,7 @@
 #  index_memorandums_on_user_id  (user_id)
 #
 class Memorandum < ApplicationRecord
+    validates :content, presence: true
+    validates :tag, presence: true
     belongs_to :user
 end

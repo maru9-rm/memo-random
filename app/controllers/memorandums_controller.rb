@@ -14,7 +14,7 @@ class MemorandumsController < ApplicationController
     def create
         @memorandum = current_user.memorandums.build(memorandum_params)
         if @memorandum.save
-            redirect_to memorandums_path ,notice: '登録完了'
+            redirect_to root_path ,notice: '登録完了'
         else
             flash.now[:error] = '失敗しました'
             render :new
@@ -38,7 +38,7 @@ class MemorandumsController < ApplicationController
     def destroy
         memorandum = current_user.memorandums.find(params[:id])
         memorandum.destroy!
-        redirect_to root_path ,notice: '削除できたよ'
+        redirect_to memorandums_path ,notice: '削除完了'
     end
 
     private
