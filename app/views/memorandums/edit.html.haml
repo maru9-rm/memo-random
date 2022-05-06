@@ -1,5 +1,28 @@
 =render 'commons/header'
 
+%ul
+    - @memorandum.errors.full_messages.each do |message|
+        %li= message
+
 .container
-    .page-title
-        edit
+    %h1.page-title
+        Edit Memorandum
+
+    = form_with(model: @memorandum, local: true) do |f|
+        .form-label
+            = f.label :content, 'Memorandum'
+        .form-area
+            = f.text_area :content, class:""
+        .flex-wrapper
+            .tag-wrapper.flex-wrapper
+                .form-label
+                    = f.label :tag, 'Tag'
+                .form-field
+                    = f.text_field :tag
+            .source-wrapper.flex-wrapper
+                .form-label
+                    = f.label :source, 'Source'
+                .form-field
+                    = f.text_field :source
+        .actions
+            = f.submit "UPDATE", class: "button"

@@ -1,6 +1,6 @@
 =render 'commons/header'
 
-.container
+.container.align-center
     %h1.page-title Index
     %table.table
         %tr
@@ -15,7 +15,11 @@
                 %td=memorandum.content
                 %td=memorandum.tag
                 %td=memorandum.source
-                %td
-                    edit
+                %td.edit
+                    =link_to 'edit', edit_memorandum_path(memorandum)
                     %br
-                    delete
+                    =link_to 'delete', memorandum_path(memorandum) , data: { method: 'delete' , confirm: '本当に削除しますか？'}
+
+    %div
+        　
+    

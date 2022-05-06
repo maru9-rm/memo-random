@@ -6,6 +6,11 @@
                 O
             M
         .header-description 登録したメモをランダムに表示します！
+
+        - unless current_page?(root_path)
+            =link_to root_path do
+                %button.header-button.home-button BACK
+                
         - if user_signed_in?
             =link_to destroy_user_session_path, data: {method: 'delete'}  do
                 %button.header-button Logout
