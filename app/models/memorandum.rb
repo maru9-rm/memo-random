@@ -19,4 +19,8 @@ class Memorandum < ApplicationRecord
     validates :content, presence: true
     validates :tag, presence: true
     belongs_to :user
+
+    def create_time
+        created_at.strftime('%Y/%m/%d')
+    end
 end

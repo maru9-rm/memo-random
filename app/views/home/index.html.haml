@@ -9,10 +9,9 @@
             -else
                 まだ何も登録されていません！
             
-        -# .phrase-show-info
-        -#     = @random.created_at.strftime('%Y/%m/%d')
-        -#     = @random.tag
-        -#     = @random.source
+        .phrase-show-info#phrase-info-area
+            = @random&.source
+            = @random&.tag
 
     .home-buttons
         %button.home-buttons-item#next-memorandum

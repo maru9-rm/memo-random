@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then((response) => {
             const memorandom = response.data
             $('#phrase-content-area').text(`${memorandom.content}`)
+            $('#phrase-info-area').text(`${memorandom.source} ${memorandom.tag}`)
+
         })
       })
   })
