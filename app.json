@@ -1,0 +1,16 @@
+{
+    "name": "memorandom9",
+    "description": "This is memorandom",
+    "keywords": [],
+    "website": "",
+    "repository": "https://github.com/maru9-rm/memo-random",
+    "env": {},
+    "addons": [
+      "heroku-postgresql:hobby-dev"
+    ],
+    "buildpacks": [{
+      "url": "heroku/nodejs"
+    }, {
+      "url": "heroku/ruby"
+    }]
+  }
