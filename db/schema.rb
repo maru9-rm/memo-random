@@ -18,8 +18,9 @@ ActiveRecord::Schema.define(version: 2022_05_02_222825) do
   create_table "memorandums", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.text "content", null: false
-    t.string "source", default: "-"
+    t.string "source", default: ""
     t.string "tag", default: "Uncategorized"
+    t.boolean "private", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_memorandums_on_user_id"

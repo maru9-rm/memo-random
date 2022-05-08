@@ -15,6 +15,14 @@
     text-align: center;
 }
 
+.align-left {
+    text-align: left;
+}
+
+.align-light {
+    text-align: right;
+}
+
 .flex-wrapper {
     display: flex;
     justify-content:space-between;
@@ -34,6 +42,7 @@
     height: 60px;
     border: none;
     padding: 0 20px;
+    cursor: pointer;
 
     a {
         text-decoration: none;

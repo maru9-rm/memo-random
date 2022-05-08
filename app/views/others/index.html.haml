@@ -1,0 +1,11 @@
+=render 'commons/header'
+
+.container.align-center
+    %h1.page-title みんなのメモ
+
+    .align-left
+        -@memorandums.each do |memorandum|
+            .others-memo
+                %p
+                    =memorandum.content
+            
