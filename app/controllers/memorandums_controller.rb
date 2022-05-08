@@ -4,7 +4,11 @@ class MemorandumsController < ApplicationController
         @memorandums = Memorandum.all
     end
 
+
     def show
+        randoms = current_user.memorandums
+        @random = randoms.sample
+        render json: @random
     end
 
     def new

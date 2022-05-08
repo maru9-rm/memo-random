@@ -5,4 +5,5 @@ class HomeController < ApplicationController
         # @random = randoms.order("RANDOM()").first
         @random = randoms.sample
     end
+
 end

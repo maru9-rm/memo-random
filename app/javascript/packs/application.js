@@ -4,7 +4,6 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
@@ -23,10 +22,11 @@ axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
 // const imagePath = (name) => images(name, true)
 
 document.addEventListener('DOMContentLoaded', () => {
-    $('.header-title').on('click', () => {
-          axios.get('/')
+    $('#next-memorandum').on('click', () => {
+          axios.get('/memorandums/1')
         .then((response) => {
-          window.alert("登録してあるメモをランダムに表示するウェブアプリです！")
+            const memorandom = response.data
+            $('#phrase-content-area').text(`${memorandom.content}`)
         })
       })
   })
