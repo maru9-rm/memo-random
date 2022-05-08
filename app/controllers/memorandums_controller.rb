@@ -1,7 +1,7 @@
 class MemorandumsController < ApplicationController
     before_action :authenticate_user!
     def index
-        @memorandums = Memorandum.all
+        @memorandums = current_user.memorandums
     end
 
 
@@ -47,6 +47,6 @@ class MemorandumsController < ApplicationController
 
     private
     def memorandum_params
-        params.require(:memorandum).permit(:content, :tag, :source)
+        params.require(:memorandum).permit(:content, :tag, :source, :private)
     end
 end

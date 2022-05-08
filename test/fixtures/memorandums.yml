@@ -4,7 +4,8 @@
 #
 #  id         :bigint           not null, primary key
 #  content    :text             not null
-#  source     :string           default("-")
+#  private    :boolean          default(FALSE)
+#  source     :string           default("")
 #  tag        :string           default("Uncategorized")
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
