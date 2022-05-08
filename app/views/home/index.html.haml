@@ -3,16 +3,16 @@
 .home-wrapper
 
     .phrase-show
-        .phrase-show-content
+        .phrase-show-content#phrase-content-area
             = @random.content
-        .phrase-show-info
-            = @random.created_at.strftime('%Y/%m/%d')
-            = @random.tag
-            = @random.source
+        -# .phrase-show-info
+        -#     = @random.created_at.strftime('%Y/%m/%d')
+        -#     = @random.tag
+        -#     = @random.source
 
     .home-buttons
-        %button.home-buttons-item
-            =link_to '次のメモを見る', root_path
+        %button.home-buttons-item#next-memorandum
+            次のメモを見る
         
         %button.home-buttons-item
             =link_to '新しいメモを登録する' ,new_memorandum_path
