@@ -4,6 +4,7 @@
     justify-content: space-between;
 }
 
+
 .table {
     width: 100%;
     text-align: center;
@@ -90,4 +91,16 @@
     background-color: whitesmoke;
     margin-bottom: 20px;
     padding: 5px 10px;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .table-wrapper {
+        overflow-x: scroll;
+    }
+    
+    .table {
+        width: 100%;
+    }
 }

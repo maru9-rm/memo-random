@@ -2,24 +2,25 @@
 
 .container.align-center
     %h1.page-title Index
-    %table.table
-        %tr
-            %th Time
-            %th Content
-            %th Tag
-            %th Source
-            %th Edit
-        -@memorandums.each do |memorandum|
+    .table-wrapper
+        %table.table
             %tr
-                %td=memorandum.created_at.strftime('%Y/%m/%d')
-                %td=memorandum.content
-                %td=memorandum.tag
-                %td=memorandum.source
-                %td.edit
-                    =link_to 'edit', edit_memorandum_path(memorandum)
-                    %br
-                    =link_to 'delete', memorandum_path(memorandum) , data: { method: 'delete' , confirm: '本当に削除しますか？'}
+                %th Time
+                %th Content
+                %th Tag
+                %th Source
+                %th Edit
+            -@memorandums.each do |memorandum|
+                %tr
+                    %td=memorandum.created_at.strftime('%Y/%m/%d')
+                    %td=memorandum.content
+                    %td=memorandum.tag
+                    %td=memorandum.source
+                    %td.edit
+                        =link_to 'edit', edit_memorandum_path(memorandum)
+                        %br
+                        =link_to 'delete', memorandum_path(memorandum) , data: { method: 'delete' , confirm: '本当に削除しますか？'}
 
-    %div
-        　
-    
+        %div
+            　
+        
