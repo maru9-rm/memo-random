@@ -56,9 +56,19 @@
         }
     }
 
-    .phrase-show-content {
+
+
+    .phrase-show {
+
+        min-height: 400px;
+        margin-top: 0px;
+    
+    &-content {
         font-size: 25px;
         font-weight: bold;
+
+        }
+
     }
 
 }
