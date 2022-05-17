@@ -47,3 +47,19 @@
     opacity: 0;
   }
 }
+
+
+
+@media screen and (max-width: 767px) {
+
+  .alert {
+    font-weight: bold;
+    left: 50%;
+    top: unset;
+    bottom: 150px;
+    transform: translateY(-50%) translateX(-50%); 
+
+
+  }
+
+}

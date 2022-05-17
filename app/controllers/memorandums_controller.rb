@@ -32,9 +32,9 @@ class MemorandumsController < ApplicationController
     def update
         @memorandum = current_user.memorandums.find(params[:id])
         if @memorandum.update(memorandum_params)
-            redirect_to root_path, notice: '更新できたよ'
+            redirect_to root_path, notice: '更新完了'
         else
-            flash.now[:error] = '更新に失敗したよ'
+            flash.now[:error] = '更新に失敗しました'
             render :edit
         end
     end
